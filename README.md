@@ -1,32 +1,42 @@
-rightsstatements.org data model
-===
+# RightsStatements.js
 
-[![Build Status](https://travis-ci.org/rightsstatements/data-model.svg)](https://travis-ci.org/rightsstatements/data-model)
+This package consumes the [RightsStatements.org RDF Data
+Model](https://github.com/rightsstatements/data-model) and converts it
+to JSON as well as exports it as a javascript array of
+simplified statements.
 
-This repository contains the implementation of interoperable rights
-statements developed for [RightsStatements.org](http://rightsstatements.org/). 
-More information about the motivation and implementation of these statements
-can be found in the following white papers:
+# Use
 
-* [Recommendations for Standardized International Rights Statements](http://rightsstatements.org/en/documentation/rights-statements-white-paper/)
-* [Requirements for the Technical Infrastructure for Standardized International Rights Statements](http://rightsstatements.org/en/documentation/technical-white-paper/)
+```js
+rightsStatements = require('rightsstatements')
+rightsStatements.find(stmt => stmt.identifier === 'NKC')
+```
 
-The rights statements are currently implemented as a [SKOS](http://www.w3.org/2004/02/skos/)
-vocabulary serialized in [Turtle](http://www.w3.org/TR/turtle/).
+```js
+{ id: 'http://rightsstatements.org/vocab/NKC/1.0/',
+  identifier: 'NKC',
+  label: 'No Known Copyright',
+  definition: 'The organization that has made the Item available
+    reasonably believes that the Item is not restricted by copyright
+    or related rights, but a conclusive determination could not be
+    made.\n\nPlease refer to the organization that has made the Item
+    available for more information.\n\nYou are free to use this Item
+    in any way that is permitted by the copyright and related rights
+    legislation that applies to your use.',
+  scopeNote: 'This Rights Statement should be used for Items for
+    which the copyright status has not been determined conclusively,
+    but for which the organization that intends to make the Item
+    available has reasonable cause to believe that the underlying
+    Work is not covered by copyright or related rights anymore. This
+    Rights Statement should not be used for Orphan Works (which are
+    assumed to be in-copyright) or for Works where the organization
+    that intends to make the Item available has not undertaken an
+    effort to ascertain the copyright status of the underlying
+    Work.',
+  modified: '2015-10-16',
+  versionInfo: '1.0' }
+```
 
-If you have feedback, you can either [open an issue on GitHub](https://github.com/rightsstatements/data-model/issues)
-or contact one of the technical co-chairs:
+# License
 
-* Mark A. Matienzo <matienzo@stanford.edu>
-* Antoine Isaac <aisaac@few.vu.nl>
-
-Contents
---- 
-
-* The current rights statements are located in [`rights-statements.ttl`](rights-statements.ttl).
-* An example file, which contains rights statements with a different version and containing sample, unofficial translations, can be found in [`example-versions.ttl`](example-versions.ttl).
-
-License
----
-
-* [CC0](https://creativecommons.org/publicdomain/zero/1.0/)
+-   [CC0](https://creativecommons.org/publicdomain/zero/1.0/)
