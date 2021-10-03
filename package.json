@@ -1,0 +1,27 @@
+{
+  "name": "rightsstatements",
+  "version": "0.1.0",
+  "description": "Consume rightsstatements.org linked data from JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/artsmia/rightsstatements-data-model.git"
+  },
+  "keywords": [
+    "rightsstatements",
+    "culture",
+    "heritage",
+    "rights",
+    "use",
+    "reuse"
+  ],
+  "author": "http://rightsstatements.org/",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/rightsstatements/data-model/issues"
+  },
+  "homepage": "https://github.com/rightsstatements/data-model#readme"
+}
